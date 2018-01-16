@@ -6,8 +6,8 @@ import './AppBar.css';
 
 const MyAppBar = (props) => (
     <AppBar title="Conway's Game of Life"
-        iconElementLeft={<IconButton onclick={props.displayControllPanelSate }><Menu /></IconButton>}
-        iconElementRight={<IconButton iconClassName='muidocs-icon-custom-github' href='' />} />
+        iconElementLeft={<IconButton onClick={props.displayControllPanelState }><Menu /></IconButton>}
+        iconElementRight={<IconButton iconClassName='muidocs-icon-custom-github' href='https://github.com/danrrrr/game-of-life' />} />
 )
 
 export default MyAppBar;
