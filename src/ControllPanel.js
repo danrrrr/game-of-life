@@ -21,19 +21,19 @@ const ControllPanel = (props) => (
                 <TableRow selectable={false}>
                     <TableRowColumn>Cell Rows</TableRowColumn>
                     <TableRowColumn>
-                        <Slider min={2} max={80} step={1} value={props.rows} onChange={(event, value) => props.rowsChange(value)}/>
+                        <Slider min={2} max={80} step={1} value={props.rows} onChange={props.rowsChange}/>
                     </TableRowColumn>
                 </TableRow>
                 <TableRow selectable={false}>
                     <TableRowColumn>Cell Columns</TableRowColumn>
                     <TableRowColumn>
-                        <Slider min={2} max={40} step={1} value={props.columns} onChange={(event, value) => props.columnsChange(value)}/>
+                        <Slider min={2} max={40} step={1} value={props.columns} onChange={props.columnsChange}/>
                     </TableRowColumn>
                 </TableRow>
                 <TableRow selectable={false}>
                     <TableRowColumn>Cell Size</TableRowColumn>
                     <TableRowColumn>
-                        <Slider min={1} max={30} step={1} value={props.size} onChange={(event, value) => props.sizeChange(event, value)}/>
+                        <Slider min={1} max={30} step={1} value={props.size} onChange={props.sizeChange}/>
                     </TableRowColumn>
                 </TableRow>
                 <TableRow selectable={false}> 

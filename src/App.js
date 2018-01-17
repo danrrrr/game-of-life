@@ -105,8 +105,8 @@ class App extends React.Component {
                 <MyAppBar displayControllPanelState={() => this.updateControllPanelState()}/>
                 <ControllPanel showControllPanel={this.state.showControllPanel} 
                     rows={this.state.cells.length} columns={this.state.cells[0].length}
-                    rowsChange={(value) => this.handleCellRowsChange(value)}
-                    columnsChange={(value) => this.handleCellColumnsChange(value)}
+                    rowsChange={(event, value) => this.handleCellRowsChange(value)}
+                    columnsChange={(event, value) => this.handleCellColumnsChange(value)}
                     duration={this.state.duration} changeDuration={(event, value) => this.changeDuration(value)}
                     size={this.state.size} sizeChange={(event,value) => this.sizeChange(value)}/>
                 <GameBoard cells={this.state.cells} size={this.state.size}
