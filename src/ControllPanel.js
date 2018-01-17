@@ -29,7 +29,7 @@ const ControllPanel = (props) => (
                 </TableRow>
                 <TableRow selectable={false}>
                     <TableRowColumn>
-                        <RaisedButton label="START" secondary={true}/>
+                        <RaisedButton label="START" secondary={true} onClick={props.start}/>
                     </TableRowColumn>
                     <TableRowColumn>
                         <RaisedButton label="Stop" secondary={true}/>

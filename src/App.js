@@ -4,7 +4,7 @@ import MyAppBar from './AppBar';
 import ControllPanel from './ControllPanel';
 import GameBoard from './GameBoard';
 import Footer from './Footer';
-
+import NextScene from './GameLogic';
 
 class App extends React.Component {
     constructor(props) {
@@ -46,6 +46,12 @@ class App extends React.Component {
             cells: _.fill(Array(this.state.cells.length), _.fill(Array(value), 0))
         })
     }
+    start() {
+        const newCells = NextScene(this.state.cells);
+        this.setState({
+            cells: newCells
+        })
+    }
     // <Footer />
     render() {
         return (
@@ -54,7 +60,8 @@ class App extends React.Component {
                 <ControllPanel showControllPanel={this.state.showControllPanel} 
                     rows={this.state.cells.length} columns={this.state.cells[0].length}
                     rowsChange={(value) => this.handleCellRowsChange(value)}
-                    columnsChange={(value) => this.handleCellColumnsChange(value)}/>
+                    columnsChange={(value) => this.handleCellColumnsChange(value)}
+                    start={() => this.start()}/>
                 <GameBoard cells={this.state.cells} size={this.state.size}
                     margin={this.state.margin} updateCellState={(x, y) => this.updateCellState(x, y)}/>
             </div>

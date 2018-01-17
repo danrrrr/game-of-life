@@ -20,13 +20,13 @@ module.exports = {
 		publicPath: '/'
 	},
 
-	devtool: 'inline-source-map',
+	devtool: '#cheap-module-eval-source-map',
 
 	devServer: {
 		hot: true,
 		contentBase: path.resolve(__dirname, 'dist'),
 		publicPath: '/',
-		port: 5000
+		port: 3000
 	},
 
 	module: {
@@ -52,7 +52,7 @@ module.exports = {
 		new HtmlWebpackPlugin({template: 'index.html', inject: true}),
 		new webpack.NoEmitOnErrorsPlugin(),
 		new OpenBrowserPlugin({
-			url: 'http://localhost:5000'
+			url: 'http://localhost:3000'
 		}),
 		new DashboardPlugin()
 	]

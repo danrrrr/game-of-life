@@ -8,7 +8,7 @@ const GameBoard = (props) => (
                 {row.map((cell, y) => {
                     const styles = {width: props.size,height: props.size,
                         margin:props.margin, display: 'inline-block', background: cell === 0 ? 'white' : 'black'};
-                    return (<Paper key={`${x}${y}`} style={styles} circle='true'
+                    return (<Paper key={`${x}${y}`} style={styles} circle={true}
                         onClick={() => props.updateCellState(x, y)}/>);
                 })
                 }
